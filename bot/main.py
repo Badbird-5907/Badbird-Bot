@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO)
 client = discord.Client()
 nou = discord.Embed()
 nou.set_image(url="https://i.kym-cdn.com/entries/icons/original/000/030/219/uno.png")
-TOKEN = "NjMwNDQwODYwNTY3NDcwMTMw.Xlc7qQ.lQtwSAceni1d0__B2VXE17NNKgo"
+TOKEN = "LMAO U TRIED"
 
 @client.event
 async def on_ready():
