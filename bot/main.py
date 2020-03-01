@@ -19,17 +19,17 @@ async def on_ready():
     print ("Token:")
     print (TOKEN)
     print ("--------------------------------------------------------------")
-    await client.change_presence(activity=discord.Game(name='!help'))
+    await client.change_presence(activity=discord.Game(name='b!help'))
 
 @client.event
 async def on_message(message):
     if message.author == client.user:
         return
-    if message.content == '!help':
+    if message.content == 'b!help':
         embed = discord.Embed(title="Commands", description="Here are some usefull commands:", color=0x00ff00)
-        embed.add_field(name="!uno-reverse", value="<red/blue/yellow/green>", inline=False)
-        embed.add_field(name="!ping", value="pong", inline=False)
-        embed.add_field(name="!roast-me", value="<will roast you>", inline=False)
+        embed.add_field(name="b!uno-reverse", value="<red/blue/yellow/green>", inline=False)
+        embed.add_field(name="b!ping", value="pong", inline=False)
+        embed.add_field(name="b!roast-me", value="<will roast you>", inline=False)
         embed.add_field(name="say some swear words", value="<sh!t/fuc*>", inline=False)
         embed.add_field(name="say ok", value="<B00m3r>", inline=False)
         embed.add_field(name="say k", value="<k>", inline=False)
@@ -38,22 +38,22 @@ async def on_message(message):
         embed.add_field(name="And much more...", value="there is a lot more to be discoverd...",  inline=False)
         await message.channel.send(embed=embed)
 
-    if message.content.startswith('!roast-me'):
+    if message.content.startswith('b!roast-me'):
             await message.channel.send('I was told not to roast trash because it smells like SH!T')
 
 
-    if message.content == '!uno-reverse red':
+    if message.content == 'b!uno-reverse red':
             await message.channel.send(file=discord.File('images/images/unored.png'))
 
-    if message.content == '!uno-reverse blue':
+    if message.content == 'b!uno-reverse blue':
                     await message.channel.send(file=discord.File('images/images/unoblue.png'))
-    if message.content == '!uno-reverse green':
+    if message.content == 'b!uno-reverse green':
                     await message.channel.send(file=discord.File('images/images/unogreen.png'))
 
-    if message.content == '!uno-reverse yellow':
+    if message.content == 'b!uno-reverse yellow':
                     await message.channel.send(file=discord.File('images/images/unoyellow.png'))
 
-    if message.content == '!ping':
+    if message.content == 'b!ping':
         await message.channel.send('pong')
 
     if message.content == 'SHIT':
