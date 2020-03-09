@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO)
 client = discord.Client()
 nou = discord.Embed()
 nou.set_image(url="https://i.kym-cdn.com/entries/icons/original/000/030/219/uno.png")
-TOKEN = "LMAO U TRIED"
+TOKEN = "NjMwNDQwODYwNTY3NDcwMTMw.XlshKg.pHt9YaViqQeXKf9HD_aug8zZLgI"
 
 @client.event
 async def on_ready():
@@ -25,11 +25,11 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-    if message.content == 'b!help':
+    if message.content == 'b! help':
         embed = discord.Embed(title="Commands", description="Here are some usefull commands:", color=0x00ff00)
-        embed.add_field(name="b!uno-reverse", value="<red/blue/yellow/green>", inline=False)
-        embed.add_field(name="b!ping", value="pong", inline=False)
-        embed.add_field(name="b!roast-me", value="<will roast you>", inline=False)
+        embed.add_field(name="b! uno-reverse", value="<red/blue/yellow/green>", inline=False)
+        embed.add_field(name="b! ping", value="pong", inline=False)
+        embed.add_field(name="b! roast-me", value="<will roast you>", inline=False)
         embed.add_field(name="say some swear words", value="<sh!t/fuc*>", inline=False)
         embed.add_field(name="say ok", value="<B00m3r>", inline=False)
         embed.add_field(name="say k", value="<k>", inline=False)
@@ -38,22 +38,23 @@ async def on_message(message):
         embed.add_field(name="And much more...", value="there is a lot more to be discoverd...",  inline=False)
         await message.channel.send(embed=embed)
 
-    if message.content.startswith('b!roast-me'):
+    if message.content.startswith('b! roast-me'):
             await message.channel.send('I was told not to roast trash because it smells like SH!T')
 
+    if message.content == 'b! uno-reverse':
+            await message.channel.send('Please use the command b! uno-reverse <colour (red/blue/green/yellow)>')
 
-    if message.content == 'b!uno-reverse red':
+    if message.content == 'b! uno-reverse red':
             await message.channel.send(file=discord.File('images/images/unored.png'))
-
-    if message.content == 'b!uno-reverse blue':
+    if message.content == 'b! uno-reverse blue':
                     await message.channel.send(file=discord.File('images/images/unoblue.png'))
-    if message.content == 'b!uno-reverse green':
+    if message.c        embed = discord.Embed(title="Commands", description="Here are some usefull commands:", color=0x00ff00)
                     await message.channel.send(file=discord.File('images/images/unogreen.png'))
 
-    if message.content == 'b!uno-reverse yellow':
+    if message.content == 'b! uno-reverse yellow':
                     await message.channel.send(file=discord.File('images/images/unoyellow.png'))
 
-    if message.content == 'b!ping':
+    if message.content == 'b! ping':
         await message.channel.send('pong')
 
     if message.content == 'SHIT':
@@ -84,8 +85,6 @@ async def on_message(message):
                         await message.channel.send('NOU')
                         await message.channel.send('UNO REVERSE')
                         await message.hannel.send(file=discord.File('images/images/nou.png'))
-
-
     if message.content == 'DIE BADBIRD BOT':
                         await message.channel.send('NOU')
                         await message.channel.send('UNO REVERSE')
