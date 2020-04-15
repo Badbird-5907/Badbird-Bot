@@ -38,6 +38,9 @@ async def on_message(message):
         embed.add_field(name="And much more...", value="there is a lot more to be discoverd...",  inline=False)
         await message.channel.send(embed=embed)
 
+        if message.content == 'Thank you for staying with us so long':
+        await message.channel.send('shutup MEE6 nobody likes ur pings MEE-PING')
+        
     if message.content.startswith('b! roast-me'):
             await message.channel.send('I was told not to roast trash because it smells like SH!T')
 
