@@ -7,7 +7,7 @@ import asyncio
 logging.basicConfig(level=logging.INFO)
 client = discord.Client()
 nou = discord.Embed()
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix='b!')
 TOKEN = "fff"
 
 @client.event
@@ -24,3 +24,4 @@ async def on_ready():
 async def foo(ctx, arg):
     await ctx.send(arg)
     
+bot.run(TOKEN)
