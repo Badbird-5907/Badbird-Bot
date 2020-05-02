@@ -1,3 +1,4 @@
+# Badbird Bot Coded by Badbird5907 -- Badbird5907.net -- Badbird5907#6382 -- V 2.5
 import logging
 import os
 import discord
