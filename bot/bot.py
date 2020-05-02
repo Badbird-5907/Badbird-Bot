@@ -8,7 +8,7 @@ import asyncio
 client = discord.Client()
 nou = discord.Embed()
 nou.set_image(url="https://i.kym-cdn.com/entries/icons/original/000/030/219/uno.png")
-TOKEN = "noI"
+TOKEN = "no"
 
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
