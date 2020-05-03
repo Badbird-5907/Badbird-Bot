@@ -41,7 +41,7 @@ async def add(ctx, a: int, b: int):
 @bot.command()
 async def multiply(ctx, a: int, b: int):
     await ctx.send(a*b)
-@bot.event()
+@client.event
 async def on_message(message):
     if message.author == client.user:
         return
@@ -58,5 +58,6 @@ async def on_message(message):
         embed.add_field(name="And much more...", value="there is a lot more to be discoverd...",  inline=False)
         embed.add_field(name="Check out my website: https://badbird5907.net", value="https://badbird5907.net", inline=False)
         await message.channel.send(embed=embed)
+            return
 
 bot.run(TOKEN)
