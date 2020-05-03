@@ -26,14 +26,25 @@ async def on_ready():
     print (TOKEN)
     print ("--------------------------------------------------------------")
     await client.change_presence(activity=discord.Game(name='b!help'))
-@bot.command(name+'help')
-async def help():
-    await send(
-    embed=discord.Embed(title="Commands", description="Some usefull commands", color=0x00ff00)
-    embed.set_author(name="a")
-    embed.add_field(name="a", value="undefined", inline=False)
-    await self.bot.say(embed=embed)
-    )
+@bot.command()
+async def jelp(ctx):
+    embed = discord.Embed(title="Commands", description="Some usefull commands.", color=0xeee657)
+    embed.add_field(name="b!help", value="Shows this help page.")
+    await ctx.send(embed=embed)
+
+    
+@bot.command()
+async def info(ctx):
+    embed = discord.Embed(title="Badbird Bot", description="Bot created by Badbird5897.", color=0xeee657)
+
+    # give info about you here
+    embed.add_field(name="Author", value="<YOUR-USERNAME>")
+    # Shows the number of servers the bot is member of.
+    embed.add_field(name="Server count", value=f"{len(bot.guilds)}")
+    # give users a link to invite thsi bot to their server
+    embed.add_field(name="Invite", value="[Invite link]https://bot.badbird5907.net")
+    await ctx.send(embed=embed)
+
 @bot.command()
 async def add(ctx, a: int, b: int):
     await ctx.send(a+b)
