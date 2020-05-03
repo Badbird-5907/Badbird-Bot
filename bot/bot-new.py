@@ -6,7 +6,7 @@ from discord.ext.commands import Bot
 import asyncio
 client = discord.Client()
 bot = commands.Bot(command_prefix='b!')
-TOKEN = "NzA2MjU0NzU3MDI2NzI2MDQ5.Xq42vw.UvXOMfbaAv2PVeieN-0iMnc2gwg"
+TOKEN = ""
 #--SETUP END--#
 @client.event
 async def on_ready():
