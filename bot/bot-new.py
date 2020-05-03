@@ -41,11 +41,11 @@ async def add(ctx, a: int, b: int):
 @bot.command()
 async def multiply(ctx, a: int, b: int):
     await ctx.send(a*b)
-@client.event
+
 async def on_message(message):
     if message.author == client.user:
         return
-    if message.content == 'help':
+    elif message.content == 'help':
         embed = discord.Embed(title="Commands", description="Here are some usefull commands:", color=0x00ff00)
         embed.add_field(name="b! uno-reverse", value="<red/blue/yellow/green>", inline=False)
         embed.add_field(name="b! ping", value="pong", inline=False)
