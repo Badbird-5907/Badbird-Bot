@@ -28,7 +28,7 @@ async def on_ready():
     print ("--------------------------------------------------------------")
     await client.change_presence(activity=discord.Game(name='b!help'))
 @bot.command()
-async def help(ctx):
+async def aa(ctx):
     embed = discord.Embed(title="Help", description="Bot created by Badbird5897.", color=0xeee657)
     embed.add_field(name="aa", value="test")
     await ctx.send(embed=embed)
