@@ -21,12 +21,23 @@ async def on_ready():
     print (TOKEN)
     print ("--------------------------------------------------------------")
     await client.change_presence(activity=discord.Game(name='b!help'))
-@bot.command()
-async def help(ctx):
-    embed = discord.Embed(title="Help", description="Bot created by Badbird5897.", color=0xeee657)
-    embed.add_field(name="aa", value="test")
-    await ctx.send(embed=embed)
-    
+async def on_message(message):
+    if message.author == client.user:
+        return
+    if message.content == 'help':
+        embed = discord.Embed(title="Commands", description="Here are some usefull commands:", color=0x00ff00)
+        embed.add_field(name="b! uno-reverse", value="<red/blue/yellow/green>", inline=False)
+        embed.add_field(name="b! ping", value="pong", inline=False)
+        embed.add_field(name="b! roast-me", value="<will roast you>", inline=False)
+        embed.add_field(name="say some swear words", value="<sh!t/fuc*>", inline=False)
+        embed.add_field(name="say ok", value="<B00m3r>", inline=False)
+        embed.add_field(name="say k", value="<k>", inline=False)
+        embed.add_field(name="say f", value="<F>", inline=False)
+        embed.add_field(name="say Die Badbird Bot", value="<a suprise>", inline=False)
+        embed.add_field(name="And much more...", value="there is a lot more to be discoverd...",  inline=False)
+        embed.add_field(name="Check out my website: https://badbird5907.net", value="https://badbird5907.net", inline=False)
+        await message.channel.send(embed=embed)
+
 @bot.command()
 async def info(ctx):
     embed = discord.Embed(title="Badbird Bot", description="Bot created by Badbird5897.", color=0xeee657)
