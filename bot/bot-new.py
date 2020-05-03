@@ -1,23 +1,27 @@
+#--SETUP START--#
+import discord
+from discord.ext import commands
+from discord.ext.commands import Bot
+import asyncio
+client = discord.Client()
 #Badbird Bot BETA
 #--SETUP START--#
 import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
 import asyncio
-logging.basicConfig(level=logging.INFO)
 client = discord.Client()
-nou = discord.Embed()
 bot = commands.Bot(command_prefix='b!')
-TOKEN = ""
+TOKEN = "NzA2MjU0NzU3MDI2NzI2MDQ5.Xq42vw.UvXOMfbaAv2PVeieN-0iMnc2gwg"
 #--SETUP END--#
-@client.event()
-async def on_ready()
+@client.event
+async def on_ready():
     print("---Bot Info---")
     print("Discord API Version:", discord.version_info)
     print("Logged in as {0.user}".format(client))
     print("---Bot Info---")
 @bot.command()
-async def info(ctx)
+async def info(ctx):
     embed = discord.Embed(title="Badbird Bot", description="Bot created by Badbird5897.", color=0xeee657)
     # give info about you here
     embed.add_field(name="Author", value="Badbird 5907")
@@ -34,4 +38,4 @@ async def add(ctx, a: int, b: int):
 @bot.command()
 async def multiply(ctx, a: int, b: int):
     await ctx.send(a*b)
-bot.run(TOKEN)
+bot.run(TOKEN)                          
