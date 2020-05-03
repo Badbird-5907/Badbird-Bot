@@ -1,5 +1,5 @@
 #Badbird Bot BETA
-import logging
+#--SETUP START--#
 import os
 import discord
 from discord.ext import commands
@@ -10,17 +10,14 @@ client = discord.Client()
 nou = discord.Embed()
 bot = commands.Bot(command_prefix='b!')
 TOKEN = ""
-
+#--SETUP END--#
 @client.event
 async def on_ready():
     print ("--------------------------------------------------------------")
-    print ("Discord API version:")
-    print (discord.version_info)
+    print ("Discord API version:", discord.version_info)
     print('Logged in as {0.user}'.format(client))
-    print ("Token:")
-    print (TOKEN)
+    print ("Token:", TOKEN)
     print ("--------------------------------------------------------------")
-    await client.change_presence(activity=discord.Game(name='b!help'))
 
 @bot.command()
 async def info(ctx):
