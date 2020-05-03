@@ -1,4 +1,4 @@
-#
+#Badbird Bot BETA
 import logging
 import os
 import discord
@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO)
 client = discord.Client()
 nou = discord.Embed()
 bot = commands.Bot(command_prefix='b!')
-TOKEN = "fff"
+TOKEN = open("betabot.txt","r")
 
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
