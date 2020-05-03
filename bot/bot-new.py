@@ -30,12 +30,7 @@ async def on_ready():
 @bot.command()
 async def help(ctx):
     embed = discord.Embed(title="Help", description="Bot created by Badbird5897.", color=0xeee657)
-    # give info about you here
-    embed.add_field(name="Author", value="<YOUR-USERNAME>")
-    # Shows the number of servers the bot is member of.
-    embed.add_field(name="Server count", value=f"{len(bot.guilds)}")
-    # give users a link to invite thsi bot to their server
-    embed.add_field(name="Invite", value="[Invite link]https://bot.badbird5907.net")
+    embed.add_field(name="aa", value="test")
     await ctx.send(embed=embed)
     
 @bot.command()
@@ -43,7 +38,7 @@ async def info(ctx):
     embed = discord.Embed(title="Badbird Bot", description="Bot created by Badbird5897.", color=0xeee657)
 
     # give info about you here
-    embed.add_field(name="Author", value="<YOUR-USERNAME>")
+    embed.add_field(name="Author", value="Badbird 5907")
     # Shows the number of servers the bot is member of.
     embed.add_field(name="Server count", value=f"{len(bot.guilds)}")
     # give users a link to invite thsi bot to their server
