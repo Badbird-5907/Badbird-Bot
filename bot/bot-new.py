@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO)
 client = discord.Client()
 nou = discord.Embed()
 bot = commands.Bot(command_prefix='b!')
-TOKEN = open("betabot.txt","r")
+TOKEN = ""
 
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
@@ -28,7 +28,7 @@ async def on_ready():
     print ("--------------------------------------------------------------")
     await client.change_presence(activity=discord.Game(name='b!help'))
 @bot.command()
-async def aa(ctx):
+async def help(ctx):
     embed = discord.Embed(title="Help", description="Bot created by Badbird5897.", color=0xeee657)
     embed.add_field(name="aa", value="test")
     await ctx.send(embed=embed)
