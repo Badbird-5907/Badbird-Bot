@@ -1,3 +1,4 @@
+#
 import logging
 import os
 import discord
@@ -30,6 +31,7 @@ async def on_ready():
 async def jelp(ctx):
     embed = discord.Embed(title="Commands", description="Some usefull commands.", color=0xeee657)
     embed.add_field(name="b!help", value="Shows this help page.")
+    embed.add_feild(name="b!add X Y", value="Replace X and Y with numbers.")
     await ctx.send(embed=embed)
 
     
