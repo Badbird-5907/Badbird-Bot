@@ -1,3 +1,4 @@
 # Badbird-Bot
 Badbird-Bot
-Older version of https://bot.badbird5907.net
+Older version of https://bot.badbird5907.net 
+## updating code soon
